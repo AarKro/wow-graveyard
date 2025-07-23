@@ -1,0 +1,63 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../assets/grass_background.svg);
+  background-repeat: repeat;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.graveyard {
+  width: 60%;
+  height: fit-content;
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+
+  & .graveyard__left {
+    flex: 1;
+  }
+  
+  & .graveyard__right {
+    flex: 1;
+  }
+  
+  & .graveyard__dirt-path {
+    flex: 1;
+    background-image: url(../assets/dirt_path.svg);
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-position: center;
+  }
+
+  & .graveyard__tombstone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+
+    & .graveyard__tombstone--header {
+       & .graveyard__tombstone--header-name {
+
+       }
+
+       & .graveyard__tombstone--header-class {
+       }
+    }
+    
+    & .graveyard__tombstone--image {
+    }
+    
+    & .graveyard__tombstone--description {
+    }
+  }
+}
