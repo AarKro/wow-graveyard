@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Chakra Petch';
+  src: url('../assets/ChakraPetch-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  src: url('../assets/ChakraPetch-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
 * {
   position: relative;
   box-sizing: border-box;
@@ -12,6 +27,8 @@ body {
   display: flex;
   justify-content: center;
   overflow-x: hidden;
+  font-family: 'Chakra Petch', sans-serif;
+  color: white;
 }
 
 .graveyard {
@@ -20,6 +37,10 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: row;
+
+  & .graveyard__placeholder {
+    height: 25em;
+  }
 
   & .graveyard__left {
     flex: 1;
@@ -44,20 +65,65 @@ body {
     align-items: center;
     text-align: center;
     gap: 1em;
+    padding: 10em 0;
 
     & .graveyard__tombstone--header {
-       & .graveyard__tombstone--header-name {
-
-       }
-
-       & .graveyard__tombstone--header-class {
-       }
+      & .graveyard__tombstone--header-name {
+        font-weight: bold;
+        font-size: 32pt;
+      }
+      
+      & .graveyard__tombstone--header-class {
+        font-weight: 500;
+        font-size: 24pt;
+      }
     }
     
     & .graveyard__tombstone--image {
     }
+
+    & .graveyard__tombstone--date {
+      font-weight: 500;
+      font-size: 16pt;
+    }
     
     & .graveyard__tombstone--description {
+      font-weight: 500;
+      font-size: 20pt;
     }
+  }
+}
+
+#pixel-rain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+.pixel-rain-svg {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+.pixel-drop {
+  fill: #0070b8; /* darker blue */
+  opacity: 0.7;
+  animation: pixel-rain-fall linear infinite;
+}
+@keyframes pixel-rain-fall {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
   }
 }
