@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Chakra Petch';
-  src: url('../assets/ChakraPetch-Bold.woff2') format('woff2');
+  src: url('./assets/ChakraPetch-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Chakra Petch';
-  src: url('../assets/ChakraPetch-Medium.woff2') format('woff2');
+  src: url('./assets/ChakraPetch-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
@@ -22,7 +22,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-image: url(../assets/grass_background.svg);
+  background-image: url(./assets/grass_background.svg);
   background-repeat: repeat;
   display: flex;
   justify-content: center;
@@ -52,7 +52,7 @@ body {
   
   & .graveyard__dirt-path {
     flex: 1;
-    background-image: url(../assets/dirt_path.svg);
+    background-image: url(./assets/dirt_path.svg);
     background-size: contain;
     background-repeat: repeat-y;
     background-position: center;
