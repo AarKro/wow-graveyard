@@ -1,3 +1,134 @@
+const tombstones = [
+  {
+    name: 'Brokode',
+    race: 'Dwarf',
+    class: 'Priest',
+    level: '6',
+    fromDate: '22.07.2025',
+    toDate: '22.07.2025',
+    quote: 'Died valiantly fighting a giant.',
+    tombstoneNumber: 1,
+  },
+  {
+    name: 'Geilisau',
+    race: 'Human',
+    class: 'Mage',
+    level: '8',
+    fromDate: '22.07.2025',
+    toDate: '23.07.2025',
+    quote: 'Died a geili sau.',
+    tombstoneNumber: 5,
+  },
+  {
+    name: 'WakeHolder',
+    race: 'Dwarf',
+    class: 'Priest',
+    level: '7',
+    fromDate: '22.07.2025',
+    toDate: '23.07.2025',
+    quote: 'Did not see the bear.',
+    tombstoneNumber: 4,
+  },
+  {
+    name: 'Gâtsû',
+    race: 'Night Elf',
+    class: 'Hunter',
+    level: '12',
+    fromDate: '22.07.2025',
+    toDate: '26.07.2025',
+    quote: 'The brave die never, though they sleep in dust: Their courage nerves a thousand living men.',
+    tombstoneNumber: 2,
+  },
+  {
+    name: 'Furyal',
+    race: 'Night Elf',
+    class: 'Warrior',
+    level: '17',
+    fromDate: '22.07.2025',
+    toDate: '27.07.2025',
+    quote: 'Murlocs...',
+    tombstoneNumber: 2,
+  },
+  {
+    name: 'Sparepart',
+    race: 'Dwarf',
+    class: 'Priest',
+    level: '14',
+    fromDate: '22.07.2025',
+    toDate: '27.07.2025',
+    quote: 'Wasn\'t me.',
+    tombstoneNumber: 6,
+  },
+  {
+    name: 'Furyest',
+    race: 'Night Elf',
+    class: 'Warrior',
+    level: '8',
+    fromDate: '27.07.2025',
+    toDate: '28.07.2025',
+    quote: 'Who was this guy even.',
+    tombstoneNumber: 3,
+  },
+  {
+    name: 'Sparepartii',
+    race: 'Dwarf',
+    class: 'Priest',
+    level: '9',
+    fromDate: '27.07.2025',
+    toDate: '28.07.2025',
+    quote: 'Fell to the stunning beauty of Rockjaws.',
+    tombstoneNumber: 5,
+  },
+  {
+    name: 'Sparepartiiv',
+    race: 'Dwarf',
+    class: 'Priest',
+    level: '9',
+    fromDate: '28.07.2025',
+    toDate: '28.07.2025',
+    quote: 'Attracted lepracy.',
+    tombstoneNumber: 3,
+  },
+  {
+    name: 'Sparepartiv',
+    race: 'Dwarf',
+    class: 'Priest',
+    level: '7',
+    fromDate: '28.07.2025',
+    toDate: '29.07.2025',
+    quote: 'this was definitely not supposed to happen',
+    tombstoneNumber: 1,
+  }
+]
+
+const leftSection = document.getElementsByClassName('graveyard__left')[0];
+const rightSection = document.getElementsByClassName('graveyard__right')[0];
+
+const insertTombstone = (tombstone, section) => {
+  section.innerHTML += `
+      <article class="graveyard__tombstone">
+        <div class="graveyard__tombstone--header">
+          <h1 class="graveyard__tombstone--header-name">${tombstone.name}</h1>
+          <h2 class="graveyard__tombstone--header-class">${tombstone.race} ${tombstone.class} — lvl ${tombstone.level}</h2>
+        </div>
+
+        <img src="./assets/tombstone_${tombstone.tombstoneNumber}.svg" alt="Tombstone of ${tombstone.name}" class="graveyard__tombstone--image">
+
+        <p class="graveyard__tombstone--date">${tombstone.fromDate} – ${tombstone.toDate}</p>
+        <p class="graveyard__tombstone--description">${tombstone.quote}</p>
+      </article>
+    `;
+};
+
+tombstones.reverse().forEach((tombstone, index) => {
+  if (index % 2 === 0) {
+    insertTombstone(tombstone, leftSection);
+  } else {
+    insertTombstone(tombstone, rightSection);
+  }
+});
+
+
 // Pixel Rain SVG Overlay
 (function createPixelRain() {
   const overlay = document.getElementById('pixel-rain-overlay');
