@@ -96,8 +96,8 @@ const tombstones = [
     level: '7',
     fromDate: '28.07.2025',
     toDate: '29.07.2025',
-    quote: 'this was definitely not supposed to happen',
-    tombstoneNumber: 1,
+    quote: 'Trolls be trollin\'.',
+    tombstoneNumber: 7,
   }
 ]
 
@@ -114,8 +114,10 @@ const insertTombstone = (tombstone, section) => {
 
         <img src="./assets/tombstone_${tombstone.tombstoneNumber}.svg" alt="Tombstone of ${tombstone.name}" class="graveyard__tombstone--image">
 
-        <p class="graveyard__tombstone--date">${tombstone.fromDate} – ${tombstone.toDate}</p>
-        <p class="graveyard__tombstone--description">${tombstone.quote}</p>
+        <div class="graveyard__tombstone--info">
+          <p class="graveyard__tombstone--date">${tombstone.fromDate} – ${tombstone.toDate}</p>
+          <p class="graveyard__tombstone--description">${tombstone.quote}</p>
+        </div>
       </article>
     `;
 };

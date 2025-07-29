@@ -38,17 +38,19 @@ body {
   justify-content: center;
 
   & .graveyard__placeholder {
-    height: 20em;
+    height: 10em;
   }
 
   & .graveyard__left {
     max-width: min(30%, 40em);
     min-width: max(30%, 30em);
+    padding: 3em 0;
   }
   
   & .graveyard__right {
     max-width: min(30%, 40em);
     min-width: max(30%, 30em);
+    padding: 3em 0;
   }
   
   & .graveyard__dirt-path {
@@ -68,12 +70,13 @@ body {
     align-items: center;
     text-align: center;
     gap: 1em;
-    padding: 10em 0;
 
     & .graveyard__tombstone--header {
       & .graveyard__tombstone--header-name {
         font-weight: bold;
         font-size: 24pt;
+        transform: translateY(1em);
+        transition: transform 0.4s ease-out;
       }
       
       & .graveyard__tombstone--header-class {
@@ -95,6 +98,24 @@ body {
       font-weight: 500;
       font-size: 16pt;
     }
+
+    & .graveyard__tombstone--info,
+      .graveyard__tombstone--header-class {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease-out;
+    }
+
+  }
+
+  & .graveyard__tombstone:hover .graveyard__tombstone--info,
+    .graveyard__tombstone:hover .graveyard__tombstone--header-class {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  & .graveyard__tombstone:hover .graveyard__tombstone--header-name {
+    transform: translateY(0);
   }
 }
 
