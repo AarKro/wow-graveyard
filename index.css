@@ -41,26 +41,17 @@ body {
     height: 10em;
   }
 
-  & .graveyard__left {
-    max-width: min(30%, 40em);
-    min-width: max(30%, 30em);
-    padding: 3em 0;
-  }
-  
-  & .graveyard__right {
-    max-width: min(30%, 40em);
-    min-width: max(30%, 30em);
+  & .graveyard__left, & .graveyard__right {
+    width: 21.25%;
     padding: 3em 0;
   }
   
   & .graveyard__dirt-path {
-    flex: 1;
     background-image: url(./assets/dirt_path.svg);
     background-size: contain;
     background-repeat: repeat-y;
     background-position: center;
-    max-width: min(15%, 20em);
-    min-width: max(15%, 15em);
+    width: 15%;
   }
 
   & .graveyard__tombstone {
@@ -74,14 +65,14 @@ body {
     & .graveyard__tombstone--header {
       & .graveyard__tombstone--header-name {
         font-weight: bold;
-        font-size: 24pt;
+        font-size: 20pt;
         transform: translateY(1em);
         transition: transform 0.4s ease-out;
       }
       
       & .graveyard__tombstone--header-class {
         font-weight: 500;
-        font-size: 20pt;
+        font-size: 16pt;
       }
     }
     
@@ -91,12 +82,12 @@ body {
 
     & .graveyard__tombstone--date {
       font-weight: 500;
-      font-size: 14pt;
+      font-size: 12pt;
     }
     
     & .graveyard__tombstone--description {
       font-weight: 500;
-      font-size: 16pt;
+      font-size: 14pt;
     }
 
     & .graveyard__tombstone--info,

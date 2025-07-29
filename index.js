@@ -101,8 +101,10 @@ const tombstones = [
   }
 ]
 
-const leftSection = document.getElementsByClassName('graveyard__left')[0];
-const rightSection = document.getElementsByClassName('graveyard__right')[0];
+const left1 = document.getElementById('left1');
+const left2 = document.getElementById('left2');
+const right1 = document.getElementById('right1');
+const right2 = document.getElementById('right2');
 
 const insertTombstone = (tombstone, section) => {
   section.innerHTML += `
@@ -122,12 +124,20 @@ const insertTombstone = (tombstone, section) => {
     `;
 };
 
-tombstones.reverse().forEach((tombstone, index) => {
-  if (index % 2 === 0) {
-    insertTombstone(tombstone, leftSection);
-  } else {
-    insertTombstone(tombstone, rightSection);
+const nextSectionGen = function*() {
+  while (true) {
+    yield left2;
+    yield right1;
+    yield left1;
+    yield right2;
   }
+}
+
+const nextSection = nextSectionGen();
+
+tombstones.forEach((tombstone) => {
+  const section = nextSection.next().value;
+  insertTombstone(tombstone, section);
 });
 
 
