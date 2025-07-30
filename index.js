@@ -99,6 +99,16 @@ const tombstones = [
     quote: 'Trolls be trollin\'.',
     tombstoneNumber: 7,
   }
+  {
+    name: 'Swarly',
+    race: 'Gnome',
+    class: 'Warlock',
+    level: '17',
+    fromDate: '22.07.2025',
+    toDate: '30.07.2025',
+    quote: 'Dragons in a starting zone? Really??',
+    tombstoneNumber: 7,
+  }
 ]
 
 const left1 = document.getElementById('left1');
