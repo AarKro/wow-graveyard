@@ -103,7 +103,7 @@ const tombstones = [
     name: 'Swarly',
     race: 'Gnome',
     class: 'Warlock',
-    level: '17',
+    level: '16',
     fromDate: '22.07.2025',
     toDate: '30.07.2025',
     quote: 'Dragons in a starting zone? Really??',
