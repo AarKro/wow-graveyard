@@ -98,7 +98,7 @@ const tombstones = [
     toDate: '29.07.2025',
     quote: 'Trolls be trollin\'.',
     tombstoneNumber: 7,
-  }
+  },
   {
     name: 'Swarly',
     race: 'Gnome',
