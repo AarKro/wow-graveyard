@@ -30,7 +30,7 @@ const tombstones = [
     tombstoneNumber: 4,
   },
   {
-    name: 'Gâtsû',
+    name: 'Gâtsù',
     race: 'Night Elf',
     class: 'Hunter',
     level: '12',
@@ -108,6 +108,16 @@ const tombstones = [
     toDate: '30.07.2025',
     quote: 'Dragons in a starting zone? Really??',
     tombstoneNumber: 7,
+  },
+  {
+    name: 'Gâtsû',
+    race: 'Human',
+    class: 'Rogue',
+    level: '9',
+    fromDate: '26.07.2025',
+    toDate: '31.07.2025',
+    quote: '"Schaff ich de lvl 10ner?"',
+    tombstoneNumber: 1,
   }
 ]
 
