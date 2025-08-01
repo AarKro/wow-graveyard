@@ -118,7 +118,27 @@ const tombstones = [
     toDate: '31.07.2025',
     quote: '"Schaff ich de lvl 10ner?"',
     tombstoneNumber: 1,
-  }
+  },
+  {
+    name: 'Sparepartv',
+    race: 'Dwarf',
+    class: 'Priest',
+    level: '16',
+    fromDate: '28.07.2025',
+    toDate: '01.08.2025',
+    quote: 'Never trust a cave.',
+    tombstoneNumber: 6,
+  },
+  {
+    name: 'Swarlyy',
+    race: 'Gnome',
+    class: 'Warlock',
+    level: '16',
+    fromDate: '30.07.2025',
+    toDate: '01.08.2025',
+    quote: 'rest in peace.',
+    tombstoneNumber: 2,
+  },
 ]
 
 const left1 = document.getElementById('left1');
